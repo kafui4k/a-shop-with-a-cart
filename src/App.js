@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 
 import HomePage from './homepage/Homepage.component';
 
@@ -8,7 +9,9 @@ class App extends Component {
 	render() {
 		return (
 		  <div className="App">
-			<HomePage />
+			<Routes>
+				<Route path='/' element={<HomePage />} />
+			</Routes>
 		  </div>
 		);
 	}
