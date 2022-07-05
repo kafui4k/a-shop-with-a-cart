@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import {sections} from '../data/sections.data'
+import shop_data from '../data/shop.data'
 import MenuItem from '../menu-item/menu-item.component'
 
 import './directory.styles.scss'
@@ -10,7 +10,7 @@ export class Directory extends Component {
 	  super(props)
 	
 	  this.state = {
-		 sections: sections
+		 sections: shop_data
 	  }
 	}
 
@@ -21,9 +21,8 @@ export class Directory extends Component {
 				this.state.sections.map(section => (
 					<MenuItem
 						title={section.title}
-						imageUrl={section.imageUrl}
+						items={section.items}
 						key={section.id}
-						linkUrl={section.linkUrl}
 					/>
 				))
 			}

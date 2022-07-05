@@ -1,17 +1,13 @@
 import React from 'react'
-import Directory from '../components/directory/directory'
+import Directory from '../../components/directory/directory'
+import SideBar from '../../components/sidebar/sidebar.component'
 
 import './homepage.styles.scss'
 
 function HomePage() {
   return (
 	<div className='homepage'>
-		<div className='nav-side-bar'>
-			<ul className='nav-items'>
-				<li>Home</li>
-				<li>Books</li>
-			</ul>
-		</div>
+		<SideBar />
 		<div className='page-contents'>
 			<h3>Featured</h3>
 			<Directory />
