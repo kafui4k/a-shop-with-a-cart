@@ -1,0 +1,22 @@
+.nav-side-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.nav-items {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.nav-items > li {
+		list-style: none;
+		text-decoration: none;
+		border-top: 1px solid rgb(185, 121, 64);
+		line-height: 5rem;
+
+		&:last-child {
+			border-bottom: 1px solid rgb(185, 121, 64);
+		}
+	}
+}
