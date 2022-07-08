@@ -1,20 +1,28 @@
 .header {
 	height: 70px;
-	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 25px;
+	border-top: 5px solid #BF4722;
 }
 
-.header-logo-container {
-	height: 100%;
-	width: 70px;
-	padding: 25px;
+.search-container {
+	padding: 15px;
+
+	input {
+		border: none;
+		height: 35px;
+		width: 200px;
+		padding: 5px;
+	}
+
+	input:focus {
+		height: 35px;
+		width: 200px;
+		padding: 5px;
+	}
 }
 
 .options {
-	width: 50%;
-	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;

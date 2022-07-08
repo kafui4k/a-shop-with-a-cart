@@ -6,7 +6,7 @@ import './header.styles.scss'
 function Header() {
   return (
 	<div className='header'>
-		<div className='header-logo-container'>
+		<div className='search-container'>
 			<input type='search' placeholder='Search' />
 		</div>
 		<div className='options'>

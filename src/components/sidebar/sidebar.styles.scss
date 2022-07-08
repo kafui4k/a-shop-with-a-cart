@@ -1,19 +1,19 @@
 .nav-side-bar {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
 
 	.nav-items {
 		display: flex;
 		flex-direction: column;
-		gap: 16px;
+		gap: 5px;
+		width: 100%;
 	}
 
 	.nav-items > li {
 		list-style: none;
 		text-decoration: none;
 		border-top: 1px solid rgb(185, 121, 64);
-		line-height: 5rem;
+		line-height: 3em;
 
 		&:last-child {
 			border-bottom: 1px solid rgb(185, 121, 64);

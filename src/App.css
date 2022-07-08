@@ -1,0 +1,6 @@
+.shop-title {
+	align-items: center;
+	justify-content: flex-start;
+	display: flex;
+	padding: 0 50px;
+}
