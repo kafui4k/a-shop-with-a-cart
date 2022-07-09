@@ -10,8 +10,12 @@ export class Directory extends Component {
 	  super(props)
 	
 	  this.state = {
-		 sections: shop_data
+		 sections: []
 	  }
+	}
+
+	componentDidMount() {
+		this.setState({ sections: shop_data})
 	}
 
   render() {
@@ -19,11 +23,11 @@ export class Directory extends Component {
 		<div className='page-contents-listing-menu'>
 			{
 				this.state.sections.map(section => (
-					<MenuItem
+						<MenuItem
 						title={section.title}
 						items={section.items}
 						key={section.id}
-					/>
+						/>
 				))
 			}
 		</div>
