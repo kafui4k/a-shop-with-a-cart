@@ -24,15 +24,13 @@ function ReviewProduct () {
 	}
 
 	return (
-		<div className='product-page'>
-			<SideBar />
-			
+		<>			
 			{
 				itemData
 					.filter(item => item.productId === params.productId)
 					.map(item => (<ReviewProductItem key={item.id} item={item} />))
 			}
-		</div>
+		</>
 	)
 }
 

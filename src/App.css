@@ -1,6 +1,37 @@
-.shop-title {
+*,html {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #FDF8F6;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	column-gap: 10px;
+	padding: 20px 20px;
+}
+
+.page-contents {
+	flex-wrap: wrap;
+}
+
+.shop-title-logo {
 	align-items: center;
 	justify-content: flex-start;
 	display: flex;
-	padding: 0 50px;
+	padding: 20px 20px;
+	cursor: pointer;
+}
+
+.shop-title-logo > img {
+	width: 10%;
+}
+
+a {
+	text-decoration: none;
+	color: #212122;
+	font-weight: 300;
 }
