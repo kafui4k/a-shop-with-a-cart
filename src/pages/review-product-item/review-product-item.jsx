@@ -2,7 +2,9 @@ import React from 'react'
 
 import './review-product-item.styles.scss'
 
-function ReviewProductItem({item}) {
+function ReviewProductItem({addItem, hello, item}) {
+
+	// const {addToCartHandler} = props;
 
   return (
 	<div className='product-page-contents'>
@@ -11,13 +13,17 @@ function ReviewProductItem({item}) {
 		</div>
 		<div className='product-item-review'>
 			<div className='product-item-review-header'>
-				<h3>TBSSGH Top Seller Book</h3>
+				<h3>TBSSGH Top Seller Book {hello}</h3>
 				<span>Tbssgh Shop</span>
 			</div>
 			<span className='product-item-review-price'>GHS {item.price}</span>
 			<input type='number' />
 			<div className='product-item-review-buttons'>
-				<button type='submit' className='product-item-review-button primary'>ADD TO CART</button>
+				<button
+					type='button'
+					className='product-item-review-button primary'
+					onClick={() => addItem(item)}
+				>ADD TO CART</button>
 				<button type='submit' className='product-item-review-button normal'>BUY IT NOW</button>
 			</div>
 			<div className='product-item-review-description'>

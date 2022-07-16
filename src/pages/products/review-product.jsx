@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-import SideBar from '../../components/sidebar/sidebar.component'
 import ReviewProductItem from '../review-product-item/review-product-item'
 
 import products_data from '../../components/data/products.data'
 
 import './review-product.styles.scss'
 
-function ReviewProduct () {
+function ReviewProduct (props) {
 	const [itemData, setItemData] = useState([])
 	
 	let params = useParams();
 
-	// console.log(params.productId)
+	const {addToCartHandler} = props;
 
 	useEffect(() => {
 		fetchProductItem()
@@ -24,11 +23,11 @@ function ReviewProduct () {
 	}
 
 	return (
-		<>			
+		<>	
 			{
 				itemData
 					.filter(item => item.productId === params.productId)
-					.map(item => (<ReviewProductItem key={item.id} item={item} />))
+					.map(item => (<ReviewProductItem addItem={addToCartHandler} key={item.id} item={item} />))
 			}
 		</>
 	)

@@ -1,7 +1,7 @@
 const products_data = [
 	{
 		id: 1,
-		productId: 'xl3l4o5',
+		productId: 'xl3l905n',
 		name: 'Execution',
 		imageUrl: 'https://pbs.twimg.com/media/Eg0Rpo3XgAEF-om.jpg',
 		price: 25.00,
@@ -9,8 +9,8 @@ const products_data = [
 	},
 	{
 		id: 2,
-		productId: 'asn3423',
-		name: 'Execution',
+		productId: 'd0674i5u',
+		name: 'Better Execution',
 		imageUrl: 'https://pbs.twimg.com/media/Eg0Rpo3XgAEF-om.jpg',
 		price: 25.00,
 		description: 'Now TBSSGH Top Seller Books can help your daily decision,much like anything else like a healthy diet. Dont skip this book if you wanna hit the road running ASAP. in a grand style. Ask?'

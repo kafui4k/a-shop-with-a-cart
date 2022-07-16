@@ -3,7 +3,10 @@ import CartItem from '../../components/cartitem/cart-item.component'
 
 import './cartpage.styles.scss'
 
-const CartPage = () => {
+const CartPage = (props) => {
+
+	const { cartItems } = props;
+
 return (
 	<div className='cartpage'>
 		<div className='cartpage-header'>
@@ -20,7 +23,8 @@ return (
 				<span>Total</span>
 			</div>
 		</div>
-		<CartItem />
+		{cartItems.map(cartItem => <CartItem key={cartItem.id} itemdata={cartItem} />)}
+		
 		<div className='cart-footer'>
 			<div className='feed-back'>
 				<span className='feed-back-text'>

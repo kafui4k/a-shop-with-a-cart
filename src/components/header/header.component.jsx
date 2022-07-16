@@ -3,14 +3,17 @@ import CartIcon from '../cart-icon/cart-icon.component'
 
 import './header.styles.scss'
 
-function Header() {
+function Header(props) {
+
+	const {cartData} = props;
+
   return (
 	<div className='header'>
 		<div className='search-container'>
 			<input type='search' placeholder='Search' />
 		</div>
 		<div className='options'>
-			<CartIcon className='option' />
+			<CartIcon className='option' cartItemCount={cartData} />
 		</div>
 	</div>
   )

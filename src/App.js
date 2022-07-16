@@ -10,16 +10,50 @@ import './App.css';
 import SideBar from './components/sidebar/sidebar.component';
 
 class App extends Component {
+	constructor(props) {
+	  super(props)
+	
+	  this.state = {
+		 cart: [],
+		 cartTotal: 0
+	  }
+	}
+
+	addToCartHandler = (productItem) => {
+		let currentCart = this.state.cart;
+
+		// check for same item in cart
+		const itemAlreadyExist = this.state.cart.filter(itemExistInCart => 
+			itemExistInCart.productId  === productItem.productId)
+
+		if (itemAlreadyExist.length > 0) {
+			currentCart.map(itemCurrentlyInCart => 
+				itemCurrentlyInCart.id === itemAlreadyExist[0].id ? 
+				itemCurrentlyInCart.quantity +=1 :
+				currentCart)
+		
+			this.setState({cart: currentCart})
+
+		} else {
+			const item = productItem;
+			item.quantity = 1;
+
+			this.setState(prevState => ({
+				cart: [...prevState.cart, item]
+			}))
+		}
+	}
+
 	render() {
 		return (
 		  <div className="App">
-			<Header />
+			<Header cartData={this.state.cart}/>
 			<div className='shop-title-logo'>
 				<img
 					src='https://www.nicepng.com/png/detail/918-9187081_book-and-pen-png-book-and-pen-logo.png'
 					alt='shop logo' />
 				<Link to='/'>
-				<h1>TBSSGH</h1>
+					<h1>TBSSGH</h1>
 				</Link>
 			</div>
 			<div className='main'>
@@ -27,8 +61,8 @@ class App extends Component {
 				<div className='page-contents'>
 					<Routes>
 						<Route path='/' element={<HomePage />} />
-						<Route path='/products/:productId' element={<ReviewProduct />} />
-						<Route path='/cart' element={<CartPage />} />
+						<Route path='/products/:productId' element={<ReviewProduct addToCartHandler={this.addToCartHandler} />} />
+						<Route path='/cart' element={<CartPage cartItems={this.state.cart} />} />
 						<Route path='*' element={
 							<div className='404-page-not-found' style={{ padding: '1rem'}}>
 								<h1>404 Page Not Found</h1>

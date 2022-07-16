@@ -6,14 +6,14 @@ const shop_data = [
 		items: [
 			{
 				id: 1,
-				productId: 'xl3l4o5',
+				productId: 'xl3l905n',
 				name: 'Execution',
 				imageUrl: 'https://pbs.twimg.com/media/Eg0Rpo3XgAEF-om.jpg',
 				price: 25.00
 			},
 			{
 				id: 2,
-				productId: 'd0ei4i5u',
+				productId: 'd0674i5u',
 				name: 'Better Execution',
 				imageUrl: 'https://pbs.twimg.com/media/Eg0Rpo3XgAEF-om.jpg',
 				price: 25.00
