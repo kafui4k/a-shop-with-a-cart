@@ -28,8 +28,18 @@
 
 	.price,
 	.quantity {
+		display: flex;
+		justify-content: space-between;
+		gap: .6rem;
+		.quantity__button {
+			cursor: pointer;
+			font-size: 2rem;
+		}
 		input {
 			width: 30px;
+			text-align: center;
+			border: 1px solid silver;
+			border-radius: .5rem;
 		}
 	}
 	.total{

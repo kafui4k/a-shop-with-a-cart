@@ -1,8 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './cart-item.styles.scss'
 
-const CartItem = ({itemdata, removeItem}) => {
+const CartItem = ({itemdata, removeItem, updateItemQuantity}) => {
+	const [quantity, setQuantity] = useState(itemdata.quantity)
+
+	const quantityValueChange = (event) => {
+		const quantityValue = event.target.value;
+
+		setQuantity(quantityValue);
+	}
+
+	const decreaseQuantityCount = () => {
+		setQuantity( quantity - 1)
+
+		updateItemQuantity(quantity, itemdata.productId)
+	}
+
+	const increaseQuantityCount = () => {
+		setQuantity( quantity + 1)
+
+		updateItemQuantity(quantity, itemdata.productId)
+	}
   return (
 	<>
 	<section className='cartpage-item'>
@@ -17,7 +36,9 @@ const CartItem = ({itemdata, removeItem}) => {
 		</div>
 		<div className='price'>GHS {itemdata.price}</div>
 		<div className='quantity'>
-			<input className='quantity__value' type='number' value={`${itemdata.quantity}`} />
+			<span className='quantity__button' onClick={decreaseQuantityCount}>-</span>
+			<input className='quantity__value' type='text' name='quantity' onChange={(event) => quantityValueChange(event)} value={quantity} />
+			<span className='quantity__button' onClick={increaseQuantityCount}>+</span>
 		</div>
 		<div className='total'>
 			<span>GHS {itemdata.price * itemdata.quantity}</span>

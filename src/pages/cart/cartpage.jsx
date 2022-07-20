@@ -5,7 +5,7 @@ import './cartpage.styles.scss'
 
 const CartPage = (props) => {
 
-	const { cartItems, removeItem } = props;
+	const { cartItems, removeItem, updateItemQuantity } = props;
 
 return (
 	<div className='cartpage'>
@@ -23,7 +23,7 @@ return (
 				<span>Total</span>
 			</div>
 		</div>
-		{cartItems.map(cartItem => <CartItem key={cartItem.id} itemdata={cartItem} removeItem={removeItem} />)}
+		{cartItems.map(cartItem => <CartItem key={cartItem.id} itemdata={cartItem} removeItem={removeItem} updateItemQuantity={updateItemQuantity} />)}
 		
 		<div className='cart-footer'>
 			<div className='feed-back'>
