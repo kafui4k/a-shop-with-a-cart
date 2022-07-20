@@ -44,6 +44,11 @@ class App extends Component {
 		}
 	}
 
+	removeItemFromCartHandler = (productItemId) => {
+		const filterItem = this.state.cart.filter(cartItem => cartItem.productId !== productItemId);
+		this.setState({cart: filterItem})
+	}
+
 	render() {
 		return (
 		  <div className="App">
@@ -62,7 +67,7 @@ class App extends Component {
 					<Routes>
 						<Route path='/' element={<HomePage />} />
 						<Route path='/products/:productId' element={<ReviewProduct addToCartHandler={this.addToCartHandler} />} />
-						<Route path='/cart' element={<CartPage cartItems={this.state.cart} />} />
+						<Route path='/cart' element={<CartPage cartItems={this.state.cart} removeItem={this.removeItemFromCartHandler} />} />
 						<Route path='*' element={
 							<div className='404-page-not-found' style={{ padding: '1rem'}}>
 								<h1>404 Page Not Found</h1>
