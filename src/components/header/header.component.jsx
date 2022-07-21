@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import CartIcon from '../cart-icon/cart-icon.component'
 
 import './header.styles.scss'
@@ -17,6 +18,10 @@ function Header(props) {
 		</div>
 	</div>
   )
+}
+
+Header.propTypes = {
+	cartData: PropTypes.array.isRequired
 }
 
 export default Header

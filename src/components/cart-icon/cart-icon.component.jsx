@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import { ReactComponent as ShoppingCartIcon} from '../../assets/shopping-bag.svg'
@@ -23,6 +24,10 @@ function CartIcon(props) {
 		</span>
 	</div>
   )
+}
+
+CartIcon.propTypes = {
+	cartItemCount: PropTypes.any.isRequired
 }
 
 export default CartIcon

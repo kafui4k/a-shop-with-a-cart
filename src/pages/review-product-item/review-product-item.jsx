@@ -1,9 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import CustomButton from '../../components/button/button.component'
 
 import './review-product-item.styles.scss'
 
-function ReviewProductItem({addItem, hello, item}) {
+function ReviewProductItem({addItem, item}) {
 
 	// const {addToCartHandler} = props;
 
@@ -14,7 +16,7 @@ function ReviewProductItem({addItem, hello, item}) {
 		</div>
 		<div className='product-item-review'>
 			<div className='product-item-review-header'>
-				<h3>TBSSGH Top Seller Book {hello}</h3>
+				<h3>TBSSGH Top Seller Book</h3>
 				<span>Tbssgh Shop</span>
 			</div>
 			<span className='product-item-review-price'>GHS {item.price}</span>
@@ -38,6 +40,11 @@ function ReviewProductItem({addItem, hello, item}) {
 		</div>
 	</div>
   )
+}
+
+ReviewProductItem.propTypes = {
+	addItem: PropTypes.func,
+	item: PropTypes.object
 }
 
 export default ReviewProductItem

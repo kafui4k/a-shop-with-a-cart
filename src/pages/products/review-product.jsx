@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
 
 import ReviewProductItem from '../review-product-item/review-product-item'
@@ -31,6 +32,10 @@ function ReviewProduct (props) {
 			}
 		</>
 	)
+}
+
+ReviewProduct.propTypes = {
+	addToCartHandler: PropTypes.func
 }
 
 export default ReviewProduct

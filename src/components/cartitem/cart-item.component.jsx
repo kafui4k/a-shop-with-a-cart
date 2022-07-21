@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
 import './cart-item.styles.scss'
 
@@ -46,6 +47,12 @@ const CartItem = ({itemdata, removeItem, updateItemQuantity}) => {
 	</section>
 	</>
   )
+}
+
+CartItem.propTypes = {
+	itemdata: PropTypes.any,
+	removeItem: PropTypes.func,
+	updateItemQuantity: PropTypes.func
 }
 
 export default CartItem

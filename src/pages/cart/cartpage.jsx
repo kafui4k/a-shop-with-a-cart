@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import CustomButton from '../../components/button/button.component';
 import CartItem from '../../components/cartitem/cart-item.component'
 
@@ -51,6 +53,12 @@ return (
 		</div>
 	</div>
 )
+}
+
+CartPage.propTypes = {
+	cartItems: PropTypes.array,
+	removeItem: PropTypes.func,
+	updateItemQuantity: PropTypes.func
 }
 
 export default CartPage
