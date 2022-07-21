@@ -1,4 +1,5 @@
 import React from 'react'
+import CustomButton from '../../components/button/button.component'
 
 import './review-product-item.styles.scss'
 
@@ -19,12 +20,15 @@ function ReviewProductItem({addItem, hello, item}) {
 			<span className='product-item-review-price'>GHS {item.price}</span>
 			<input type='number' />
 			<div className='product-item-review-buttons'>
-				<button
+				<CustomButton
 					type='button'
 					className='product-item-review-button primary'
 					onClick={() => addItem(item)}
-				>ADD TO CART</button>
-				<button type='submit' className='product-item-review-button normal'>BUY IT NOW</button>
+				>ADD TO CART</CustomButton>
+				<CustomButton 
+					type='button'
+				 	className='product-item-review-button normal'
+				>BUY IT NOW</CustomButton>
 			</div>
 			<div className='product-item-review-description'>
 				<p className='review-product-description-text'>

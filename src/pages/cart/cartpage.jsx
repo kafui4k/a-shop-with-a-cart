@@ -1,4 +1,5 @@
 import React from 'react'
+import CustomButton from '../../components/button/button.component';
 import CartItem from '../../components/cartitem/cart-item.component'
 
 import './cartpage.styles.scss'
@@ -36,10 +37,16 @@ return (
 				<span className='subtotal'>Subtotal GHS 40.00</span>
 				<span className='notice'>Taxes and shipping calculated at checkout</span>
 				<div className='transactions-buttons'>
-					<button className='transactions-button primary'>re</button>
-					<button className='transactions-button primary'>continue shopping</button>
+					<CustomButton
+						className='transactions-button primary'
+					>re</CustomButton>
+					<CustomButton
+						className='transactions-button primary'
+					>continue shopping</CustomButton>
 				</div>
-				<button className='checkout-button normal'>checkout</button>
+				<CustomButton
+					className='checkout-button normal'
+				>checkout</CustomButton>
 			</div>
 		</div>
 	</div>

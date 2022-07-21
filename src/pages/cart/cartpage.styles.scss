@@ -61,33 +61,6 @@
 			.transactions-buttons {
 				display: flex;
 				gap: 5px;
-
-				.transactions-button {
-					padding: 15px;
-					cursor: pointer;
-				}
-
-				.primary {
-					border: 2px solid #BF4722;
-					color: #BF4722;
-					background-color: white;
-					font-size: medium;
-					letter-spacing: 2px;
-				}
-
-			}
-
-			.checkout-button {
-				padding: 15px;
-				cursor: pointer;
-			}
-
-			.normal {
-				border: none;
-				background-color: #BF4722;
-				color: white;
-				font-size: medium;
-				letter-spacing: 2px;
 			}
 		}
 	}
